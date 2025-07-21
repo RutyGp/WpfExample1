@@ -20,4 +20,10 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+
+    private void EventsExample(object sender, RoutedEventArgs e)
+    {
+        WindowWithEvents windowWithEvents = new WindowWithEvents();
+        windowWithEvents.Show();
+    }
 }

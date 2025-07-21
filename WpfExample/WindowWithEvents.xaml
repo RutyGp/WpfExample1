@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfExample.WindowWithEvents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfExample"
+        mc:Ignorable="d"
+        Title="WindowWithEvents" Height="450" Width="800">
+   
+       
+        <Grid Margin="10" Background="Azure">
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="שם משתמש:" Grid.Row="0" Margin="0,0,0,5"/>
+            <TextBox x:Name="UsernameTextBox" Grid.Row="1" Margin="0,0,0,10" Width="200"/>
+
+            <TextBlock Text="סיסמה:" Grid.Row="2" Margin="0,0,0,5"/>
+            <PasswordBox x:Name="UserPasswordBox" Grid.Row="3" Width="200" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="0,10,0,0">
+                <RadioButton x:Name="Option1Radio" Content="אופציה 1" Checked="RadioButton_Checked" Margin="0,0,10,0" />
+                <RadioButton x:Name="Option2Radio" Content="אופציה 2" Checked="RadioButton_Checked"/>
+            </StackPanel>
+
+            <Button Content="שלח" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+                Margin="0,50,0,0" Width="80" Click="SubmitButton_Click"/>
+
+            <TextBlock x:Name="ResultTextBlock" Grid.Row="4" Margin="100,50,0,0" VerticalAlignment="Bottom" TextWrapping="Wrap"/>
+        </Grid>
+    </Window>
+

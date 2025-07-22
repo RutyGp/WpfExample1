@@ -26,4 +26,10 @@ public partial class MainWindow : Window
         WindowWithEvents windowWithEvents = new WindowWithEvents();
         windowWithEvents.Show();
     }
+
+    private void Examples(object sender, RoutedEventArgs e)
+    {
+        Examples examples= new Examples();
+        examples.Show();
+    }
 }
